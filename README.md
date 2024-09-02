@@ -1,0 +1,2 @@
+docker network create enid_service_network
+docker-compose up
