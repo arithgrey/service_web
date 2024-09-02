@@ -6,7 +6,6 @@ http {
     # Configuración para el frontend en el puerto 80
    server {
         listen 80;
-        server_name enidservice.com www.enidservice.com;
 
         location / {
             proxy_pass http://frontend:5173;

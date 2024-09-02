@@ -8,6 +8,10 @@ services:
       - "8080:8080"
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - /etc/letsencrypt/live/enidservice.com/fullchain.pem:/etc/letsencrypt/live/enidservice.com/fullchain.pem:ro
+      - /etc/letsencrypt/live/enidservice.com/privkey.pem:/etc/letsencrypt/live/enidservice.com/privkey.pem:ro
+      - /etc/letsencrypt/options-ssl-nginx.conf:/etc/letsencrypt/options-ssl-nginx.conf:ro
+      - /etc/letsencrypt/ssl-dhparams.pem:/etc/letsencrypt/ssl-dhparams.pem:ro
     networks:
       - enid_service_network
     
